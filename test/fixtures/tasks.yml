@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  to_do: MyText
+  due_date: 2015-01-29 19:41:07
+  priority_level: MyString
+  assign_to: MyString
+
+two:
+  to_do: MyText
+  due_date: 2015-01-29 19:41:07
+  priority_level: MyString
+  assign_to: MyString

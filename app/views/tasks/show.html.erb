@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>To do:</strong>
+  <%= @task.to_do %>
+</p>
+
+<p>
+  <strong>Due date:</strong>
+  <%= @task.due_date %>
+</p>
+
+<p>
+  <strong>Priority level:</strong>
+  <%= @task.priority_level %>
+</p>
+
+<p>
+  <strong>Assign to:</strong>
+  <%= @task.assign_to %>
+</p>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>

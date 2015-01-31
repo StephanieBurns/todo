@@ -1,0 +1,30 @@
+<%= form_for(@task) do |f| %>
+  <% if @task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+      <ul>
+      <% @task.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+      <p> <%= f.label :to_do %> <%= f.text_area :to_do %></p> 
+        <%= f.label :priority_level, "Priority?"%><br />
+      <p><% the_array = ['High', 'Medium', 'Low'] %></p> 
+      <p><%= f.select :priority_level, options_for_select(the_array.collect {|v,i| [v,the_array.index(v)] } )%></p> 
+      <p> <%= f.label :assign_to %> <%= select_tag :assign_to, "<option>Christian</option><option>Stephanie</option>".html_safe %> </p> 
+      <p> <%= f.label :due_date %> <%= f.date_field :due_date %> </p>  
+
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
